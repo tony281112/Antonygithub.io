@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Para ti 💌</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <!-- PORTADA -->
+    <section class="hero" id="hero" aria-live="polite">
+      <!-- flores laterales (antes de abrir) -->
+      <div class="sideFlowers left" aria-hidden="true">
+        <div class="stem"></div>
+        <div class="bloom b1"></div>
+        <div class="bloom b2"></div>
+        <div class="bloom b3"></div>
+        <div class="leaf l1"></div>
+        <div class="leaf l2"></div>
+      </div>
+
+      <div class="sideFlowers right" aria-hidden="true">
+        <div class="stem"></div>
+        <div class="bloom b1"></div>
+        <div class="bloom b2"></div>
+        <div class="bloom b3"></div>
+        <div class="leaf l1"></div>
+        <div class="leaf l2"></div>
+      </div>
+
+      <!-- luces suaves -->
+      <div class="softLights" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+      </div>
+
+      <div class="card">
+        <div class="badge" aria-hidden="true"><span class="heart">❤</span></div>
+
+        <h1 class="title">Una carta para ti</h1>
+        <p class="subtitle">Toca el sobre para abrirlo.</p>
+
+        <button class="envelope" id="openBtn" aria-label="Abrir la carta">
+          <span class="envBack"></span>
+          <span class="envFront"></span>
+          <span class="envFlap" aria-hidden="true"></span>
+          <span class="seal" aria-hidden="true">❤</span>
+          <span class="tap">Tocar</span>
+        </button>
+
+        <p class="micro">Tip: también funciona con <b>Enter</b>. Para cerrar: <b>Esc</b>.</p>
+      </div>
+
+      <div class="bottomFade" aria-hidden="true"></div>
+    </section>
+
+    <!-- MODAL CARTA -->
+    <section class="modal" id="modal" aria-hidden="true">
+      <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+      <article class="sheet" role="dialog" aria-modal="true" aria-label="Carta">
+        <header class="sheetTop">
+          <div class="toLine">Para: <span id="toName">mi niña</span></div>
+          <button class="iconBtn" id="closeBtn" aria-label="Cerrar">✕</button>
+        </header>
+
+        <!-- ✅ SCROLL real aquí -->
+        <div class="sheetBody">
+          <!-- VIDEOS -->
+  <div class="videoWrap">
+  <div class="videoCard">
+    <video class="video" id="v1" src="video1.mp4" muted playsinline loop preload="metadata"></video>
+    <div class="tape t1" aria-hidden="true"></div>
+
+    <div class="videoControls">
+      <button class="miniBtn" id="audio1" aria-pressed="false">🔇 Audio 1</button>
+      <button class="miniBtn ghost" id="pause1" aria-pressed="false">⏸ Pausa</button>
+    </div>
+  </div>
+
+  <div class="videoCard">
+    <video class="video" id="v2" src="video2.mp4" muted playsinline loop preload="metadata"></video>
+    <div class="tape t2" aria-hidden="true"></div>
+
+    <div class="videoControls">
+      <button class="miniBtn" id="audio2" aria-pressed="false">🔇 Audio 2</button>
+      <button class="miniBtn ghost" id="pause2" aria-pressed="false">⏸ Pausa</button>
+    </div>
+  </div>
+
+  <div class="miniNote">
+    <span>🎞️</span> Recuerdos en 15 segundos.
+  </div>
+</div>
+          <!-- CARTA -->
+          <div class="letter">
+            <div class="letterHead">
+              <div class="stamp" aria-hidden="true">💗</div>
+              <div>
+                <h2>Hola, mi niña:</h2>
+                <p class="date" id="dateLine"></p>
+              </div>
+            </div>
+
+            <div class="text">
+              <p>Quiero decirte que estoy orgulloso de ti. Te he visto esforzarte desde que te conocí; vi lo aplicada que eras. Aunque a veces te daba flojera, igual te esforzaste mucho para llegar a dónde estás ahora.</p>
+
+              <p>Recuerdo nuestras primeras citas en la biblioteca: tú estudiando y yo sin entender nada de esos temas… pero no dejaba de mirarte, y eso fue lo que me enamoró de ti. Vi cómo te pusiste al corriente con tus cursos. Incluso adelantaba cursos solo para estar ahí contigo.</p>
+
+              <p>Tal vez, si me hubiera esforzado más, ahorita nuestra historia sería diferente. Las veces que lloraste y tuviste ansiedad por jalar algún curso ahora ya son solo recuerdos, porque sí pudiste. Como siempre te decía: <b>eres capaz</b>, y confío en que mejorarás cada día.</p>
+
+              <p>Me gustaría estar en este momento contigo, pero son tus decisiones y las respetaré. Sonríe mucho, alégrate y siéntete orgullosa de lo que has logrado.</p>
+
+              <p>Sé que seguirás avanzando, y yo también seguiré avanzando para ser mejores, para que algún día les contemos a nuestros hijos cómo fue nuestra historia.</p>
+
+              <p class="emph"><b>Felicidades, mi chinita.</b><br>
+              Siempre serás parte de mi historia, y eso nadie lo cambia.</p>
+
+              <p>Atentamente,<br>
+              <b>Aquel que cuenta los días hasta cada 12.</b></p>
+            </div>
+
+            <div class="actions">
+              <button class="btn ghost" id="petalsBtn">🌸 Lluvia de pétalos</button>
+             
+            </div>
+          </div>
+        </div>
+
+        <footer class="sheetBottom">
+          <small>Hecho con cariño (y un poquito de código).</small>
+        </footer>
+      </article>
+    </section>
+
+    <canvas id="fx" class="fx" aria-hidden="true"></canvas>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
